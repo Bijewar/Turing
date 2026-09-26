@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --black: #000000;
+    --white: #FFFFFF;
+    --orange: #FF4500;
+    --gray-light: #F5F5F5;
+    --gray-text: #666666;
+    --border: #E5E5E5;
+    
+    /* Graph Node Colors from Nexus Demo */
+    --node-controllable: #FF6B35;
+    --node-mediator: #004E89;
+    --node-bottleneck: #C5283D;
+    --node-outcome: #1A936F;
+    --node-chemistry: #7B2D8E;
+    --highlight-color: #E91E63;
+  }
+
+  body {
+    background-color: var(--white);
+    color: var(--black);
+    margin: 0;
+    overflow: hidden; /* No page-level scroll. Each tab manages its own scroll. */
+  }
+
+  /* Custom Scrollbars */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #000000;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #333333;
+  }
+}
+
+@layer components {
+  /* Brutalist Containers */
+  .brutal-box {
+    @apply bg-white border border-[#E5E5E5] shadow-brutal-subtle;
+  }
+
+  /* Matrix Backgrounds */
+  .matrix-bg {
+    background-image: radial-gradient(#C0C0C0 1.5px, transparent 1.5px);
+    background-size: 24px 24px;
+  }
+  
+  .tab-pane-bg {
+    background-image: radial-gradient(#D0D0D0 1.5px, transparent 1.5px);
+    background-size: 24px 24px;
+  }
+
+  /* Hairline Borders */
+  .hairline-border { border: 1px solid #000; }
+  .hairline-b { border-bottom: 1px solid #000; }
+  .hairline-l { border-left: 1px solid #000; }
+  .hairline-r { border-right: 1px solid #000; }
+}
